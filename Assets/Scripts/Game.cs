@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
+using Zenject;
 
 public class Game : MonoBehaviour {
-    [SerializeField] private BallView _ballView;
-    [SerializeField] private int _ballInitialHealth = 10;
+    [Inject] private BallView _ballView;
+    [Inject] private int _ballInitialHealth;
     private BallPresenter _ballPresenter;
 
     private void Start() {
